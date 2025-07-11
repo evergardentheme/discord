@@ -25,18 +25,18 @@ $maroon: $red;
 $peach: $orange;
 $sapphire: $snow;
 
-.visual-refresh.theme-dark,
-.visual-refresh .theme-dark {
-  @import "@everviolet/palette/scss/winter";
-
-  @import "components/tweaks/dark";
-  @import "theme";
-}
-
 .visual-refresh.theme-light,
 .visual-refresh .theme-light {
   @import "components/tweaks/light";
   @import "theme";
 
   @include theme.highlights("latte");
+}
+
+.visual-refresh.theme-dark,
+.visual-refresh .theme-dark {
+  @import "@everviolet/palette/scss/winter";
+
+  @import "components/tweaks/dark";
+  @import "theme";
 }
