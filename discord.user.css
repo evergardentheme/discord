@@ -1,14 +1,14 @@
 /* ==UserStyle==
-@name           Discord Catppuccin
-@namespace      github.com/catppuccin/discord
+@name           Discord Evergarden
+@namespace      github.com/everviolet/discord
 @version        0.2.1
-@description    Soothing pastel theme for Discord
-@author         Catppuccin
+@description    Cozy theme for Discord
+@author         Evergarden
 @preprocessor   stylus
-@var select theme "Theme" ["latte:Latte", "frappe:Frappe", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select theme "Theme" ["summer:Summer", "spring:Spring", "fall:Fall", "winter:Winter*"]
 @var select accent "Accent" {"Rosewater": "'rosewater'", "Flamingo": "'flamingo'", "Pink": "'pink'", "Mauve": "'mauve'", "Red": "'red'", "Maroon": "'maroon'", "Peach": "'peach'", "Yellow": "'yellow'", "Green": "'green'", "Teal": "'teal'", "Blue*": "'blue'", "Sapphire": "'sapphire'", "Sky": "'sky'", "Lavender": "'lavender'"}
 ==/UserStyle== */
 
 @-moz-document regexp("https?://(canary\\.|ptb\\.|)discord.com/.*") {
-    @import url("https://catppuccin.github.io/discord/dist/catppuccin-" + theme + "-" + accent + ".theme.css")
+  @import url("https://everviolet.github.io/discord/themes/evergarden-" + theme + "-" + accent + ".theme.css")
 }
