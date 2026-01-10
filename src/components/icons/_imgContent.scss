@@ -1,3 +1,4 @@
+// TODO: unneeded? breaks nitro "Secure" text & svg uses `currentColor` anyways
 $imgContent: (
   "lockIcon": (
     icon:
@@ -6,7 +7,7 @@ $imgContent: (
 );
 
 @each $class, $icon in $imgContent {
-  [class*="#{$class}_"] {
+  [class*="-#{$class}"] {
     content: url("#{map-get($icon, icon)}") !important;
   }
 }
