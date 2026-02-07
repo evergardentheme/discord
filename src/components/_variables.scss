@@ -59,11 +59,6 @@
   --text-feedback-warning: #{$yellow};
   --text-feedback-info: #{$blue};
 
-  --background-feedback-positive: #{adjust-color($green, $alpha: -0.9)};
-  --background-feedback-critical: #{adjust-color($red, $alpha: -0.9)};
-  --background-feedback-warning: #{adjust-color($yellow, $alpha: -0.9)};
-  --background-feedback-info: #{adjust-color($blue, $alpha: -0.9)};
-
   --message-reacted-background-default: #{adjust-color($brand, $alpha: -0.7)} !important;
   --message-reacted-text-default: #{$brand};
 
@@ -73,6 +68,7 @@
   --opacity-blurple-32: #{adjust-color($brand, $alpha: -0.68)};
   --opacity-blurple-60: #{adjust-color($brand, $alpha: -0.4)};
   --blurple-50: #{$brand};
+  --blurple-60: #{darken($brand, math.div(20%, 2))};
 
   // TODO: `2025_04_desktop_refresh_fast_follows` "Darker Guild List Background"
   --app-frame-background: #{darken($crust, 2%)};
@@ -95,17 +91,15 @@
   --chat-border: #{$crust};
   --chat-text-muted: #{$subtext0};
 
+  --checkbox-icon-active: #{$crust};
   --checkbox-border-default: #{$overlay0};
+
+  --radio-thumb-background-active: #{$crust};
 
   --border-muted: #{$surface0};
   --border-strong: #{$mantle};
   --border-normal: #{$crust};
   --border-subtle: #{$base} !important;
-  --background-modifier-hover: #{adjust-color($overlay2, $alpha: -0.85)};
-  --background-modifier-selected: #{adjust-color($overlay0, $alpha: -0.8)};
-  --background-modifier-accent: #{adjust-color($text, $alpha: -0.74)};
-  --background-modifier-active: #{adjust-color($text, $alpha: -0.83)};
-  --background-mod-faint: #{adjust-color($surface2, $alpha: -0.95)};
   --background-mod-muted: #{adjust-color($surface2, $alpha: -0.95)};
   --background-mod-normal: #{adjust-color($surface2, $alpha: -0.85)};
   --background-mod-subtle: #{adjust-color($surface2, $alpha: -0.75)} !important;
@@ -130,15 +124,19 @@
   --background-feedback-info: #{adjust-color($sky, $alpha: -0.85)};
   --icon-feedback-info: #{$sky};
 
+  --background-feedback-notification: #{$red};
+  --icon-feedback-notification: #{$red};
+  --badge-notification-background: #{$red};
+
+  --status-positive: #{$green};
   --status-positive-background: #{$green};
   --status-positive-text: #{$base};
 
+  --status-warning: #{$yellow};
   --status-warning-background: #{$yellow};
   --status-warning-text: #{$base};
 
   --status-danger: #{$red};
-  --status-positive: #{$green};
-  --status-warning: #{$yellow};
 
   // colorWarning
   --black-500: #{$crust};
@@ -162,10 +160,7 @@
   --primary-800: #{$crust};
 
   --white: #{$text};
-  --white-400: #{$text};
   --white-500: #{$text};
-  --white-600: #{$subtext1};
-  --white-700: #{$subtext0};
 
   --guild-boosting-pink: #{$pink};
   --guild-boosting-blue: #{$blue};
@@ -193,6 +188,13 @@
   --control-primary-background-hover: #{darken($brand, math.div(15%, 2))};
   --control-primary-background-active: #{darken($brand, math.div(25%, 2))};
 
+  --control-secondary-background-default: #{$surface1} !important;
+  --control-secondary-background-hover: #{darken($surface1, math.div(10%, 2))};
+  --control-secondary-background-active: #{darken($surface1, math.div(15%, 2))};
+  --control-secondary-border-default: #{$surface0};
+  --control-secondary-text-default: #{$text} !important;
+  --control-secondary-text-hover: #{$text};
+
   --control-critical-primary-background-default: #{$red};
   --control-critical-primary-background-hover: #{darken($red, math.div(10%, 2))};
   --control-critical-primary-background-active: #{darken(
@@ -204,20 +206,6 @@
 --control-critical-primary-text-default: #{$base};
 --control-critical-primary-text-hover: #{$base};
 
---control-connected-background-default: #{$green};
---control-connected-background-hover: #{darken($green, math.div(10%, 2))};
---control-connected-background-active: #{darken($green, math.div(15%, 2))};
---control-connected-border-default: #{$green};
---control-connected-border-hover: #{darken($green, math.div(5%, 2))};
---control-connected-border-active: #{darken($green, math.div(5%, 2))};
-
---control-secondary-background-default: #{$surface1} !important;
---control-secondary-background-hover: #{darken($surface1, math.div(10%, 2))};
---control-secondary-background-active: #{darken($surface1, math.div(15%, 2))};
---control-secondary-text-default: #{$text} !important;
-
---control-critical-secondary-text-default: #{$text};
---control-critical-secondary-border-default: #{$red};
 --control-critical-secondary-background-default: transparent;
 --control-critical-secondary-background-hover: #{darken(
  $red,
@@ -225,19 +213,25 @@ math.div(5%, 2))
 }
 
 ;
---control-critical-secondary-text-hover: #{$base};
---control-critical-secondary-border-hover: #{darken($red, math.div(5%, 2))};
 --control-critical-secondary-background-active: #{darken(
  $red,
 math.div(10%, 2))
 }
 
 ;
---control-critical-secondary-text-active: #{$base};
+--control-critical-secondary-border-default: #{$red};
+--control-critical-secondary-border-hover: #{darken($red, math.div(5%, 2))};
 --control-critical-secondary-border-active: #{darken($red, math.div(5%, 2))};
+--control-critical-secondary-text-default: #{$text};
+--control-critical-secondary-text-hover: #{$base};
+--control-critical-secondary-text-active: #{$base};
 
---control-secondary-border-default: #{$surface0};
---control-secondary-text-hover: #{$text};
+--control-connected-background-default: #{$green};
+--control-connected-background-hover: #{darken($green, math.div(10%, 2))};
+--control-connected-background-active: #{darken($green, math.div(15%, 2))};
+--control-connected-border-default: #{$green};
+--control-connected-border-hover: #{darken($green, math.div(5%, 2))};
+--control-connected-border-active: #{darken($green, math.div(5%, 2))};
 
 // discord still uses the button-outline naming for some variables for some reason?
 --button-outline-primary-text: #{$text};
@@ -245,23 +239,6 @@ math.div(10%, 2))
 --button-outline-brand-text: #{$text};
 --button-outline-brand-background-hover: #{darken($brand, math.div(5%, 2))};
 --button-outline-brand-border-active: #{darken($brand, math.div(5%, 2))};
-
-// used by vencord
---redesign-button-positive-background: #{$green} !important;
---redesign-button-positive-pressed-background: #{darken(
- $green,
-math.div(10%, 2))
-}
-
-;
-
---redesign-button-secondary-background: #{$surface1} !important;
---redesign-button-secondary-pressed-background: #{darken(
- $surface1,
-math.div(10%, 2))
-}
-
-;
 
 --modal-background: #{$base} !important;
 --modal-footer-background: #{$base};
@@ -300,13 +277,16 @@ $alpha: -0.95)
 --message-highlight-background-hover: #{adjust-color($brand, $alpha: -0.94)};
 
 --background-code: #{$base};
+// --background-code-addition: #{adjust-color($green, $alpha: -0.85)};; hljs compiles in selectors for these.
+// --background-code-deletion: #{adjust-color($red, $alpha: -0.85)};;
 
---channels-default: #{$subtext0} !important;
---channel-icon: #{$subtext0} !important;
+--channels-default: #{darken($subtext0, 5%)} !important;
+--channel-icon: #{darken($subtext0, 5%)} !important;
 --channel-text-area-placeholder: #{adjust-color($text, $alpha: -0.5)};
 --channeltextarea-background: #{$mantle};
 
 --icon-muted: #{darken($subtext0, 5%)} !important;
+--icon-voice-muted: #{$red};
 --icon-default: #{$text};
 --icon-strong: #{$text};
 --icon-subtle: #{$subtext1};
@@ -330,8 +310,6 @@ $alpha: -0.95)
 --interactive-background-selected: #{adjust-color($overlay0, $alpha: -0.8)};
 --interactive-background-active: #{adjust-color($text, $alpha: -0.83)};
 
---search-popout-option-non-text-color: #{$subtext0};
-
 --__spoiler-background-color--hidden: #{$surface2};
 --__spoiler-warning-background-color: #{lighten($surface2, 5%)};
 
@@ -340,9 +318,17 @@ $alpha: -0.95)
 
 --plum-23: #{$base};
 
---badge-background-default: #{$brand};
---badge-text-default: #{$crust};
 --badge-text-brand: #{$base};
+
+--text-status-online: #{$green};
+--text-status-idle: #{$yellow};
+--text-status-dnd: #{$red};
+--text-status-offline: #{$subtext1};
+
+--icon-status-online: #{$green};
+--icon-status-idle: #{$yellow};
+--icon-status-dnd: #{$red};
+--icon-status-offline: #{$subtext1};
 
 --twitch: #{darken($mauve, 10%)};
 --playstation: #{darken($blue, 10%)};
@@ -358,27 +344,6 @@ $alpha: -0.95)
 --notice-text-warning: #{$crust};
 }
 
-.visual-refresh.theme-dark,
-.visual-refresh.theme-light {
-  --text-feedback-positive: #{$green};
-}
-
 ::selection {
   background-color: #{rgba($brand, 0.6)};
-}
-
-// modified from https://stackoverflow.com/a/62880368
-@mixin recolor($color: #000) {
-  filter: url('data:image/svg+xml;utf8,\
-    <svg xmlns="http://www.w3.org/2000/svg">\
-      <filter id="ctp-recolor" color-interpolation-filters="sRGB">\
-        <feColorMatrix type="matrix" values="\
-          0 0 0 0 #{math.div(red($color), 255)}\
-          0 0 0 0 #{math.div(green($color), 255)}\
-          0 0 0 0 #{math.div(blue($color), 255)}\
-          0 0 0 1 0\
-        "/>\
-      </filter>\
-    </svg>\
-    #ctp-recolor');
 }

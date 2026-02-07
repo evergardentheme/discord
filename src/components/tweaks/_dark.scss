@@ -2,14 +2,14 @@
 
 div[class^="item_"][class*="addFriend_"],
 div[class^="numberBadge_"][style*="background-color: var(--background-feedback-notification);"],
+div[class^="numberBadge_"][style*="background-color: var(--badge-notification-background);"],
 div[class*="iconBadge_"][class*="isCurrentUserConnected_"],
-div[class^="bar_"][class*="unreadMentionsBar_"],
 span[class*="botTag_"],
 span[class^="unreadPill_"],
 div[class^="listItem_"] div[class^="wrapper_"] [class*="selected_"], // Server list entries with no icons (Home/Add server/Discover etc)
+div[class^="icon_"][class*="noIcon_"], // Mutual servers with no icon
 button[class^="container_"]>div[class^="icon_"]>svg, // Add Friend Page Discoverable Servers svg
 div[class^="newBadge_"],
-div[class^="checkbox_"],
 button[class*="button_"][class*="lookFilled_"][class*="colorRed_"],
 button[class*="button_"][class*="lookFilled_"][class*="colorGreen_"],
 button[class*="button_"][class*="lookFilled_"][class*="colorLink_"],
@@ -19,7 +19,6 @@ svg[class^="status_"], // Vc status (mute/deafen)
 svg[class^="dots_"], // Status typing indicator
 div[class*="textBadge_"][class*="base_"],
 svg[class^="descriptionIcon_"],
-div[class*="winButtonClose_"]:hover,
 div[class^="uploadDropModal_"],
 svg[class^="stepIcon_"],
 svg[class^="activeIcon_"], // Account switcher
@@ -28,6 +27,8 @@ span[class*="planOptionDiscount_"], // Nitro plan discount badge
 div[class*="memberCount_"], // Onboarding option member count
 svg[class*="flowerStar_"] + div[class*="childContainer_"],
 div[class*="streamerModeEnabledBtn_"],
+div[class*="nowPlaying_"], // Registered games now playing
+div[class^="pageControlContainer_"], // Selected page control
 [class*="notice_"][class*="colorBrand_"], [class*="colorStreamerMode_"], [class*="colorSpotify_"], [class*="colorPremium_"], [class*="colorPlayStation_"],
 .interactive:hover {
   --white: #{$crust};
@@ -76,9 +77,6 @@ button.vc-btn-positive {
   color: #{$crust} !important;
 }
 
-svg[class^="radioIndicator_"] [class*="refreshIcon_"] {
-  fill: #{$crust};
-}
 div[class^="automodText_"] {
   color: #{$crust};
 }
@@ -115,4 +113,12 @@ svg[class^="selectedIcon_"] > circle[fill="white"] {
 // Channels & Roles Browse channels count
 div[class*="textBadge_"][class*="base_"][style*="background-color: var(--background-accent)"] {
   --white: #{$text};
+}
+
+div[class*="winButtonClose_"]:hover {
+  color: #{$crust};
+}
+
+div[class^="bar_"][class*="unreadMentionsBar_"] {
+  color: #{$crust};
 }
