@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Discord Evergarden
-@namespace      github.com/everviolet/discord
+@namespace      codeberg.org/evergarden/discord
 @version        0.2.1
 @description    Cozy theme for Discord
 @author         Evergarden
@@ -10,5 +10,5 @@
 ==/UserStyle== */
 
 @-moz-document regexp("https?://(canary\\.|ptb\\.|)discord.com/.*") {
-  @import url("https://everviolet.github.io/discord/themes/evergarden-" + theme + "-" + accent + ".theme.css")
+  @import url("https://evergardentheme.github.io/discord/themes/evergarden-" + theme + "-" + accent + ".theme.css")
 }
