@@ -1,84 +1,90 @@
 <h3 align="center">
-	<img src="https://github.com/everviolet/.github/raw/main/assets/logo-circle.png" width="100" alt="Logo"/><br/>
-	Evergarden for <a href="https://discord.app">Discord</a>
+  <img src="https://codeberg.org/evergarden/.profile/raw/branch/main/assets/logo-circle.png" width="100" alt="Logo"/><br/>
+  Evergarden for <a href="https://discord.app">Discord</a>
 </h3>
 
 <p align="center">
-	<a href="https://github.com/everviolet/discord/stargazers"><img src="https://img.shields.io/github/stars/everviolet/discord?style=for-the-badge&colorA=313B40&colorB=DBBC7F"></a>
-	<a href="https://github.com/everviolet/discord/issues"><img src="https://img.shields.io/github/issues/everviolet/discord?style=for-the-badge&colorA=313B40&colorB=E69875"></a>
-	<a href="https://github.com/everviolet/discord/contributors"><img src="https://img.shields.io/github/contributors/everviolet/discord?style=for-the-badge&colorA=313B40&colorB=97C9C3"></a>
+  <a href="https://codeberg.org/evergarden/discord/stars">
+    <img src="https://img.shields.io/gitea/stars/evergarden/discord?gitea_url=https%3A%2F%2Fcodeberg.org&style=for-the-badge&colorA=2B3337&colorB=F5D098">
+  </a>
+  <a href="https://codeberg.org/evergarden/discord/issues">
+    <img src="https://img.shields.io/gitea/issues/open/evergarden/discord?gitea_url=https%3A%2F%2Fcodeberg.org&style=for-the-badge&colorA=2B3337&colorB=F7A182">
+  </a>
+  <a href="https://codeberg.org/evergarden/discord/activity/contributors">
+    <img src="https://img.shields.io/github/contributors/evergardentheme/discord?style=for-the-badge&colorA=2B3337&colorB=B3E6DB">
+  </a>
 </p>
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/everviolet/discord/main/assets/previews/preview.webp"/>
+	<img src="assets/previews/preview.webp"/>
 </p>
 
 ### Previews
 
 <details>
-<summary>Winter</summary>
-<img src="https://raw.githubusercontent.com/everviolet/discord/main/assets/previews/winter.webp"/>
+  <summary>Winter</summary>
+  <img src="assets/previews/winter.webp"/>
 </details>
 <details>
-<summary>Fall</summary>
-<img src="https://raw.githubusercontent.com/everviolet/discord/main/assets/previews/fall.webp"/>
+  <summary>Fall</summary>
+  <img src="assets/previews/fall.webp"/>
 </details>
 <details>
-<summary>Spring</summary>
-<img src="https://raw.githubusercontent.com/everviolet/discord/main/assets/previews/spring.webp"/>
+  <summary>Spring</summary>
+  <img src="assets/previews/spring.webp"/>
 </details>
 <details>
-<summary>Summer</summary>
-<img src="https://raw.githubusercontent.com/everviolet/discord/main/assets/previews/summer.webp"/>
+  <summary>Summer</summary>
+  <img src="assets/previews/summer.webp"/>
 </details>
 
 ### Usage
 
 #### [BetterDiscord](https://betterdiscord.app)
 
-1. Download your preferred flavour:
+1. Download your preferred variant:
 
-- [Summer](./themes/summer.theme.css?raw=1)
-- [Spring](./themes/spring.theme.css?raw=1)
-- [Fall](./themes/fall.theme.css?raw=1)
-- [Winter](./themes/winter.theme.css?raw=1)
+- [Summer](themes/summer.theme.css)
+- [Spring](themes/spring.theme.css)
+- [Fall](themes/fall.theme.css)
+- [Winter](themes/winter.theme.css)
 
 2. Copy the downloaded file to your BetterDiscord themes folder.
 3. Enable the theme in BetterDiscord settings.
 
 #### Clients/Mods with custom CSS support
 
-1. Simply add your preferred flavour into your discord clients CustomCSS file/editor.
+1. Simply add your preferred variant into your discord clients CustomCSS file/editor.
 
 ```css
 /* summer */
-@import url("https://everviolet.github.io/discord/themes/evergarden-summer.theme.css");
+@import url("https://evergardentheme.github.io/discord/themes/evergarden-summer.theme.css");
 /* spring */
-@import url("https://everviolet.github.io/discord/themes/evergarden-spring.theme.css");
+@import url("https://evergardentheme.github.io/discord/themes/evergarden-spring.theme.css");
 /* fall */
-@import url("https://everviolet.github.io/discord/themes/evergarden-fall.theme.css");
+@import url("https://evergardentheme.github.io/discord/themes/evergarden-fall.theme.css");
 /* winter */
-@import url("https://everviolet.github.io/discord/themes/evergarden-winter.theme.css");
+@import url("https://evergardentheme.github.io/discord/themes/evergarden-winter.theme.css");
 
 /* You can also append colors to customize the accent, e.g. */
 /* winter (pink accent)*/
-@import url("https://everviolet.github.io/discord/themes/evergarden-winter-pink.theme.css");
+@import url("https://evergardentheme.github.io/discord/themes/evergarden-winter-pink.theme.css");
 /* spring (orange accent) */
-@import url("https://everviolet.github.io/discord/themes/evergarden-spring-orange.theme.css");
+@import url("https://evergardentheme.github.io/discord/themes/evergarden-spring-orange.theme.css");
 ```
 
 #### [Stylus](https://github.com/openstyles/stylus)
 
 1. Enable CSP Patching from Stylus Settings > Advanced.
-2. [Click here to install](https://github.com/everviolet/discord/raw/main/discord.user.css).
-3. Choose your preferred flavour and accent color from the Stylus preference dropdown.
+2. [Click here to install](discord.user.css).
+3. Choose your preferred variant and accent color from the Stylus preference dropdown.
 
 ### FAQ
 
 - Q: **_"Can this get my account banned?"_**
 - A: Using third party clients and injecting custom css is against the ToS. While nobody has ever been banned for simply using discord client mods, We are not responsible for anything that might happen to your account by using third party clients. Use at your own discretion!
 
-- Q: **_"Can I automatically switch flavors between light and dark mode?"_**
+- Q: **_"Can I automatically switch variants between light and dark mode?"_**
 - A: The following snippet showcases a configuration that switches between
   `summer` in light mode and `winter` in dark mode by adding an inline
   [`prefers-color-scheme` media
@@ -88,9 +94,9 @@
   MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@import#importing_css_rules_conditional_on_media_queries)).
 
   ```css
-  @import url("https://everviolet.github.io/discord/themes/evergarden-winter.theme.css")
+  @import url("https://evergardentheme.github.io/discord/themes/evergarden-winter.theme.css")
   (prefers-color-scheme: dark);
-  @import url("https://everviolet.github.io/discord/themes/evergarden-summer.theme.css")
+  @import url("https://evergardentheme.github.io/discord/themes/evergarden-summer.theme.css")
   (prefers-color-scheme: light);
   ```
 
@@ -115,5 +121,7 @@
 <hr>
 
 <p align="center">
-	<a href="https://github.com/comfysage/evergarden/blob/mega/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=LICENSE&message=GPL3&colorA=313B40&colorB=9BB5CF"/></a>
+  <a href="https://codeberg.org/evergarden/discord/src/LICENSE">
+    <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=LICENSE&message=Apache-2.0&colorA=2B3337&colorB=AFD9E6"/>
+  </a>
 </p>
